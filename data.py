@@ -63,7 +63,7 @@ def create_data(KK,testN, steps, subs, write=False, seed=1):
     pts = KK/subs #training points
     pts2 = testN/subs
     all = np.zeros((KK,steps,3,4))
-    all_u= np.random.normal([0]*4, [1,10,1,10], (200,4))
+    all_u= np.random.normal([0]*4, [1.2,12,1.2,12], (200,4))
 
     for i in range(0,200):
         a = System(u=np.transpose(all_u[i]))
