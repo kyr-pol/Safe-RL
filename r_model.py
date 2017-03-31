@@ -257,7 +257,7 @@ class GP_model(object):
             state_m[9*i+1, 0:D] = state_m[9*i, 0:D] + mus[9*i+1]
             state_m[9*i+1,D] = np.dot(state_m[9*i,0:D],theta) * 0.1**4
             state_v[9*i+1,0:D,0:D] = S[9*i+1]
-            #this is only valid because of the liner controller
+            #this is only valid because of the linear controller
             state_v[9*i+1,D,D] = 2 * 0.1**8 * np.dot(theta**2,np.diag(S[9*i+1]))
             for k in range(2,10):
                 state_m[9*i+k], state_v[9*i+k], mus[9*i+k], S[9*i+k] =         \
